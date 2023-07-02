@@ -39,5 +39,12 @@ notesContainer.addEventListener("keyup", function() {
     updateStorage();
 });
 
+document.addEventListener("keydown", event =>{
+    if(event.key === "Enter"){
+        document.execCommand("insertLineBreak");
+        event.preventDefault();
+    }
+})
+
 // Load the stored notes when the page loads
 showNotes();
